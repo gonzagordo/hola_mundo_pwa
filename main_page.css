@@ -1,0 +1,9 @@
+body {
+    background-image: url('/hola_mundo_pwa/extrior.png');
+    background-size: cover;  /* Ajusta el tamaño de la imagen para cubrir toda la pantalla */
+    background-position: center;  /* Centra la imagen */
+    background-repeat: no-repeat;  /* Evita que la imagen se repita */
+    height: 100vh;  /* Asegura que el fondo cubra toda la altura de la ventana */
+    margin: 0;  /* Elimina el margen por defecto */
+    overflow: hidden;  /* Evita que aparezcan scrollbars si no son necesarias */
+}

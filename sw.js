@@ -4,14 +4,13 @@ const CACHE_NAME = 'pwa-cache-v1';
 // Archivos a cachear para que la PWA funcione offline
 const urlsToCache = [
   '/',
-  '/app.js',
-  'exterior.png',
-  'icon.png',
+  '/exterior.png',
+  '/icon.png',
   '/index.html',
   '/app.js',
   '/main_page.css',
   '/manifest.json',
-  'sw.js'
+  '/sw.js'
   // Agrega otros archivos necesarios aquí
 ];
 

@@ -16,15 +16,28 @@ const urlsToCache = [
 
 // Evento de instalación del Service Worker
 self.addEventListener('install', (event) => {
-  // Pre-cachear los archivos importantes
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
-        console.log('Archivos cacheados correctamente');
-        return cache.addAll(urlsToCache);
+        // Intentar cachear todos los archivos uno por uno
+        return Promise.all(
+          urlsToCache.map((url) => {
+            return cache.add(url).catch((error) => {
+              console.error('Error cacheando el archivo:', url, error);
+            });
+          })
+        );
       })
   );
 });
+
+
+
+
+
+
+
+
 
 // Evento de activación del Service Worker
 self.addEventListener('activate', (event) => {

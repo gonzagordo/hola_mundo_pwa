@@ -1,3 +1,15 @@
+// comprobacion de modo stand alone
+
+if (window.matchMedia('(display-mode: standalone)').matches) {
+    console.log('La aplicación está en modo standalone.');
+    // Aquí puedes ejecutar cualquier lógica que dependa de estar en standalone
+    alert('la aplicacion esta en modo stand alone');
+} else {
+    console.log('La aplicación NO está en modo standalone.');
+    // Este código se ejecutará si la PWA no está instalada o está corriendo desde el navegador
+     alert('la aplicacion esta NOOOO en modo stand alone');
+}
+// registro del service worker 
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('./sw.js').then(registration => {

@@ -30,14 +30,6 @@ self.addEventListener('install', (event) => {
   );
 });
 
-
-
-
-
-
-
-
-
 // Evento de activación del Service Worker
 self.addEventListener('activate', (event) => {
   // Borrar cachés antiguas si se actualiza el caché
